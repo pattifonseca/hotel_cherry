@@ -146,7 +146,13 @@ while True:
             else:
                 break
             consultar_reserva(reservas,hospede)
-            
+
+        elif opcao == 6:
+            print("Programa encerrado!")
+            break
+        else:
+            print("Opção inválida")
+
             
     except ValueError:
         print("Solicitação negada, dados invalidos.")
