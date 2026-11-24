@@ -112,30 +112,41 @@ while True:
 
         if opcao == 6:
              print("Saindo do programa...")
-             break   
+             break 
+          
         if opcao == 1:
             numero = int(input("Número do quarto: "))
             tipo = str(input("Tipo de acomodação:(Simples,Duplo ou Luxo) ")).strip().capitalize()
             diaria = float(input("Diária do quarto:R$ ").replace(",","."))
             cadastrar_quartos(quartos,numero,tipo,diaria)
+
         elif opcao == 2:
             listar_quartos(quartos)
+
+
         elif opcao == 3:
             numero = int(input("Qual quarto gostaria de fazer a reserva? "))
             hospede = input("Responsável pela reserva? ").strip().capitalize()
             if hospede.isdigit() or not hospede:
                 print("Nome inválido! Digite um nome válido.")
-            elif hospede == "":
-                print("Preencha os dados corretamente!")
             else:
                 dias = int(input("Quantos dias de reserva? "))
                 realizar_reservas(quartos, reservas, numero, hospede, dias)
+
+
         elif opcao == 4:
             hospede = str(input("Nome do responsavél pela reserva: ")).strip().capitalize()
-            cancelar_reserva(reservas,quartos,hospede) 
+            cancelar_reserva(reservas,quartos,hospede)
+
+
         elif opcao == 5:
             hospede = str(input("Colsultar reserva no nome de: ")).strip().capitalize()
+            if hospede.isdigit() or not hospede:
+                print("Nome inválido! Digite um nome válido.")
+            else:
+                break
             consultar_reserva(reservas,hospede)
+            
             
     except ValueError:
         print("Solicitação negada, dados invalidos.")
