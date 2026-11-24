@@ -1,0 +1,1 @@
+Sistema de gerenciamento de hotel desenvolvido em Python, com cadastro e listagem de quartos, realização e cancelamento de reservas, consulta de hóspedes e cálculo de valores de hospedagem. Utiliza funções, listas, dicionários e tratamento de exceções.
